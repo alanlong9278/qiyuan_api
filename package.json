@@ -1,0 +1,26 @@
+{
+  "name": "qiyuan_api_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "@hapi/inert": "^6.0.4",
+    "@hapi/vision": "^6.1.0",
+    "env2": "^2.2.2",
+    "hapi-swagger": "^14.2.4",
+    "joi": "^17.4.2",
+    "mysql2": "^2.3.2",
+    "package": "^1.0.1",
+    "sequelize": "^6.7.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
