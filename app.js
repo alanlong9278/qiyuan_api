@@ -5,6 +5,7 @@ const routes = require('./routes/index');
 const routesShops = require('./routes/shops');
 const routesOrders = require('./routes/orders');
 const pluginHapiSwagger = require('./plugins/swagger');
+const pluginHapiPagination = require('./plugins/hapi-pagination');
 
 const server = new Hapi.Server({
   port: config.port,
@@ -14,6 +15,7 @@ const server = new Hapi.Server({
 const init = async () => {
   await server.register([
     ...pluginHapiSwagger,
+    pluginHapiPagination
   ]);
   server.route([
     // 创建一个简单的hello hapi接口
