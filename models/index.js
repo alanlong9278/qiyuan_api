@@ -7,10 +7,12 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = {
   ...configs[env],
+  dialectOptions: {
+    collate: 'utf8_general_ci'
+  },
   define: {
     underscored: true,
     charset: 'utf-8',
-    collate: 'utf8_general_ci'
   },
 };
 const db = {};

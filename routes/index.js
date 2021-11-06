@@ -1,10 +1,9 @@
 // routes/hello-hapi.js
+const routesShops = require('./shops');
+const routesOrders = require('./orders');
+const routesUsers = require('./users');
 module.exports = [
-  {
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-      return 'hapi';
-    }
-  }
+  ...routesShops,
+	...routesOrders,
+	...routesUsers
 ]

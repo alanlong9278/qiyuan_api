@@ -25,6 +25,8 @@ module.exports = {
       thumb_url: Sequelize.STRING,
       created_at: Sequelize.DATE,
       updated_at: Sequelize.DATE,
+    },{
+	charset: 'utf8'
     });
   },
 

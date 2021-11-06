@@ -9,6 +9,7 @@ module.exports = [
   {
     plugin: HapiSwagger,
     options: {
+			cors: true,
       info: {
         title: '接口文档',
         version: packageModule.version,

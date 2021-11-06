@@ -10,13 +10,16 @@
   "author": "Alan",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^20.0.0",
+    "@hapi/hapi": "^20.2.1",
     "@hapi/inert": "^6.0.4",
     "@hapi/vision": "^6.1.0",
+    "axios": "^0.23.0",
     "env2": "^2.2.2",
+    "hapi-auth-jwt2": "^10.2.0",
     "hapi-pagination": "^4.0.0",
     "hapi-swagger": "^14.2.4",
     "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.2",
     "package": "^1.0.1",
     "sequelize": "^6.7.0"

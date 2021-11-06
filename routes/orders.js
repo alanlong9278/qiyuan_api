@@ -1,4 +1,5 @@
 const Joi = require('joi');
+const { jwtHeaderDefine } = require('../utils/router-helper');
 
 const GROUP_NAME = 'orders';
 module.exports = [
@@ -21,9 +22,7 @@ module.exports = [
             }),
           ),
         }),
-        headers: Joi.object({
-          authorization: Joi.string().required(),
-        }).unknown(),
+				...jwtHeaderDefine
       },
     },
   },

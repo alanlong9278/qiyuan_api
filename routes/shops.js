@@ -25,6 +25,7 @@ module.exports = [
       validate: {
         query: Joi.object(paginationDefine),
       },
+			auth: false
     },
   },
   {
@@ -49,6 +50,29 @@ module.exports = [
     config: {
       tags: ['api', GROUP_NAME],
       description: '获取店铺的商品列表',
+			auth: false
+    },
+  },
+	{
+    method: 'POST',
+    path: `/${GROUP_NAME}`,
+    handler: async (request, h) => {
+			const result = await models.shops.create({
+				name: 'test1',
+				thumb_url: 'xxxx'
+			});
+      return h.response({ result });
+    },
+    config: {
+      tags: ['api', GROUP_NAME],
+      description: '获取店铺列表',
+      validate: {
+        payload: Joi.object({
+					name: Joi.string(),
+					thumb_url: Joi.string()
+				}),
+      },
+			auth: false,
     },
   },
 ];
